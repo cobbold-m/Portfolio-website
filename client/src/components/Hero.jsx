@@ -10,9 +10,30 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center bg-gradient-to-br from-[#f8fafc] via-white to-[#eff6ff] pt-16"
+      className="min-h-screen flex items-center bg-gradient-to-br from-[#f8fafc] via-white to-[#eff6ff] pt-16 relative overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      {/* Subtle geometric decoration — top right */}
+      <div className="absolute top-0 right-0 w-[480px] h-[480px] pointer-events-none opacity-[0.07]" aria-hidden="true">
+        <svg viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="380" cy="100" r="200" stroke="#1e3a5f" strokeWidth="1.5" />
+          <circle cx="380" cy="100" r="140" stroke="#3b82f6" strokeWidth="1" />
+          <circle cx="380" cy="100" r="80" stroke="#1e3a5f" strokeWidth="1" />
+          <line x1="180" y1="100" x2="480" y2="100" stroke="#3b82f6" strokeWidth="0.75" />
+          <line x1="380" y1="0" x2="380" y2="300" stroke="#3b82f6" strokeWidth="0.75" />
+        </svg>
+      </div>
+      {/* Subtle dot grid — bottom left */}
+      <div className="absolute bottom-16 left-0 w-48 h-48 pointer-events-none opacity-[0.06]" aria-hidden="true">
+        <svg viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {Array.from({ length: 6 }).map((_, row) =>
+            Array.from({ length: 6 }).map((_, col) => (
+              <circle key={`${row}-${col}`} cx={16 + col * 32} cy={16 + row * 32} r="2.5" fill="#1e3a5f" />
+            ))
+          )}
+        </svg>
+      </div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="max-w-3xl">
           {/* Greeting tag */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#eff6ff] border border-[#bfdbfe] rounded-full mb-6">
@@ -121,3 +142,4 @@ function Hero() {
 }
 
 export default Hero;
+
