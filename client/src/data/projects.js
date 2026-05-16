@@ -4,13 +4,12 @@
 const projects = [
   {
     id: 1,
-    title: 'ESG Score Prediction Using ML Classification',
+    title: ' Brexit-Political-Uncertainty-UK-Stock-Market-Analysis',
     description:
-      'Built a machine learning classification model to predict ESG scores for publicly listed companies, helping investors identify sustainable investment opportunities.',
-    problem:
-      'Manual ESG rating is slow and inconsistent; this automates and standardises scoring.',
+      'This project analyses how political uncertainty affects the stock returns and trading volume of 200 UK-listed firms between 2016 and 2020, comparing the responses of domestically and internationally exposed companies.:
+      'Political risk affects firms unevenly, yet most models treat it as a uniform shock; This project proved that firms respond heterogeneously to political uncertainty shocks.',
     tools: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib'],
-    githubUrl: null, // TODO: Replace with your GitHub repo URL e.g. 'https://github.com/yourusername/esg-ml'
+    githubUrl: 'https://github.com/cobbold-m/Brexit-Political-Uncertainty-UK-Stock-Market-Analysis', // TODO: Replace with your GitHub repo URL e.g. 'https://github.com/yourusername/esg-ml'
     demoUrl: null,   // TODO: Replace with live demo URL if available
   },
   {

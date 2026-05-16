@@ -3,40 +3,26 @@
 const experience = [
   {
     id: 1,
-    role: 'PAYE Tax Advisor',
-    company: 'HGS (on behalf of HMRC)',
-    period: '2022 – 2023', // TODO: Replace with your actual dates
-    location: 'United Kingdom',
+    role: 'Junior Product Manager',
+    company: 'Achive by Petra',
+    period: 'Sep 2024 – Sep 2025', // TODO: Replace with your actual dates
+    location: 'Accra, Ghana',
     description:
-      'Provided expert PAYE tax advice to UK taxpayers, handling complex queries and resolving account discrepancies.',
+      'Owned data-informed product roadmap for Achieve Money, using SQL and Python to extract customer behavior insights and prioritize features based on business value metrics',
     highlights: [
-      'Delivered accurate and empathetic tax guidance to a high volume of callers daily.',
-      'Resolved complex PAYE account discrepancies, requiring deep knowledge of HMRC systems.',
-      'Developed strong communication, analytical, and stakeholder management skills.',
+      'Built automated reporting dashboards tracking customer satisfaction (improved from 60% to 90%) and product adoption, presenting findings to non-technical stakeholders and senior leadership.',
+      'Managed end-to-end data requirements in Agile sprints, translating business needs into technical specifications for engineering teams and ensuring consistent data documentation',
+      'Collaborated cross-functionally with UX, engineering, and compliance teams to deliver regulatory-compliant product releases on schedule',
     ],
-    companyUrl: null, // TODO: Add company website URL if desired
+    companyUrl: 'https://theachieveapp.com/'
   },
+  
   {
     id: 2,
-    role: 'Property Management / Real Estate Operations',
-    company: 'Broll (CBRE subsidiary)',
-    period: '2020 – 2021', // TODO: Replace with your actual dates
-    location: 'South Africa',
-    description:
-      'Managed day-to-day operations for commercial real estate portfolios, coordinating between tenants, contractors, and clients.',
-    highlights: [
-      'Oversaw operational workflows across multiple commercial properties, ensuring tenant satisfaction.',
-      'Produced client-facing financial and operational reports with clear, data-driven insights.',
-      'Gained hands-on experience in real estate finance, client reporting, and operational analytics.',
-    ],
-    companyUrl: null,
-  },
-  {
-    id: 3,
     role: 'Student Ambassador / Academic Support',
-    company: 'University', // TODO: Replace with your actual university name
-    period: '2019 – 2020', // TODO: Replace with your actual dates
-    location: 'United Kingdom',
+    company: 'University of Reading', // TODO: Replace with your actual university name
+    period: 'Sep 2025 – Sep 2026', // TODO: Replace with your actual dates
+    location: 'Reading, United Kingdom',
     description:
       'Supported students in academic development, delivered presentations, and assisted with university events.',
     highlights: [
@@ -44,7 +30,7 @@ const experience = [
       'Delivered presentations at open days and campus events, representing the university.',
       'Strengthened public speaking, documentation, and interpersonal skills.',
     ],
-    companyUrl: null,
+    companyUrl: 'https://www.reading.ac.uk'/,
   },
 ];
 
