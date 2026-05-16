@@ -4,11 +4,9 @@
 const projects = [
   {
     id: 1,
-    title: 'Brexit-Political-Uncertainty-UK-Stock-Market-Analysis',
-    description:
-      'This project analyses how political uncertainty affects the stock returns and trading volume of 200 UK-listed firms between 2016 and 2020, comparing the responses of domestically and internationally exposed companies.',
-    problem:
-      'Political risk affects firms unevenly, yet most models treat it as a uniform shock; This project proved that firms respond heterogeneously to political uncertainty shocks.',
+    title: 'Brexit Political Uncertainty & UK Stock Market Analysis',
+    description: 'Analysed how political uncertainty affects the stock returns and trading volume of 200 UK-listed firms between 2016 and 2020, comparing the responses of domestically and internationally exposed companies.',
+    problem: 'Political risk affects firms unevenly, yet most models treat it as a uniform shock. This project proved that firms respond heterogeneously to political uncertainty shocks.',
     tools: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib'],
     githubUrl: 'https://github.com/cobbold-m/Brexit-Political-Uncertainty-UK-Stock-Market-Analysis',
     demoUrl: null,

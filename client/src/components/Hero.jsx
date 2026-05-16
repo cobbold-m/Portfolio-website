@@ -52,9 +52,8 @@ function Hero() {
             </a>
 
             {/* Download CV */}
-            {/* TODO: Replace the href with the actual path to your CV file, e.g. '/cv/YourName_CV.pdf' */}
             <a
-              href="'/Users/ajobamushia/Desktop/CV/ADJOBA COBBOLD M.pdf'"
+              href="/cv/ADJOBA_COBBOLD_M.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 border-2 border-[#1e3a5f] text-[#1e3a5f] font-medium rounded-lg hover:bg-[#1e3a5f] hover:text-white transition-all duration-200"

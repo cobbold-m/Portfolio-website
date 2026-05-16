@@ -100,7 +100,7 @@ function Footer() {
               {/* TODO: Replace href with your actual CV file path e.g. '/cv/YourName_CV.pdf' */}
               <li>
                 <a
-                  href="/cv/your-cv.pdf"
+                  href="/cv/ADJOBA_COBBOLD_M.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors duration-200"
