@@ -44,7 +44,7 @@ function Navbar() {
             className="text-[#1e3a5f] font-bold text-lg tracking-tight hover:text-[#3b82f6] transition-colors duration-200"
           >
             {/* TODO: Replace [YOUR NAME] with your actual name */}
-            [YOUR NAME]
+            [Adjoba Mushia Cobbold]
           </a>
 
           {/* Desktop nav links */}
