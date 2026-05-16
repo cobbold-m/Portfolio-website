@@ -3,10 +3,10 @@ import emailjs from '@emailjs/browser';
 
 const INITIAL_FORM = { name: '', email: '', message: '' };
 
-// EmailJS credentials are stored in environment variables (client/.env)
-const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+// EmailJS credentials — override via environment variables if needed
+const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  || 'service_bntrl4v';
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_zfm182b';
+const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || '3ThcvKnDzgbOzO0H0';
 
 function Contact() {
   const [form, setForm] = useState(INITIAL_FORM);
