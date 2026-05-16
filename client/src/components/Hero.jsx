@@ -23,10 +23,9 @@ function Hero() {
           </div>
 
           {/* Name */}
-          {/* TODO: Replace [YOUR NAME] with your actual full name */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1e3a5f] leading-tight mb-4">
             Hi, I'm{' '}
-            <span className="text-[#3b82f6]">[Adjoba Mushia Cobbold]</span>
+            <span className="text-[#3b82f6]">Adjoba Mushia Cobbold</span>
           </h1>
 
           {/* Headline */}

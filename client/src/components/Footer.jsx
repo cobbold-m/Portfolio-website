@@ -23,8 +23,7 @@ function Footer() {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-10">
           {/* Brand column */}
           <div>
-            {/* TODO: Replace [YOUR NAME] with your actual name */}
-            <p className="text-lg font-bold tracking-tight text-white mb-2">[YOUR NAME]</p>
+            <p className="text-lg font-bold tracking-tight text-white mb-2">Adjoba Mushia Cobbold</p>
             <p className="text-sm text-slate-300 leading-relaxed max-w-xs">
               MSc Finance &amp; FinTech &mdash; bridging financial insight and data-driven decision making.
             </p>
@@ -123,8 +122,7 @@ function Footer() {
         {/* Divider */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-slate-400">
-            {/* TODO: Replace [YOUR NAME] with your actual name */}
-            &copy; {year} [YOUR NAME]. All rights reserved.
+            &copy; {year} Adjoba Mushia Cobbold. All rights reserved.
           </p>
           <p className="text-xs text-slate-500">
             Built with React, Tailwind CSS &amp; Express
