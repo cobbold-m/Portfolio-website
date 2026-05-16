@@ -67,7 +67,7 @@ function Contact() {
               {/* Email */}
               {/* TODO: Replace the href and visible email with your actual email address */}
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:ajobamushia@gmail.com"
                 className="flex items-center gap-3 text-sm text-slate-600 hover:text-[#3b82f6] transition-colors duration-200 group"
               >
                 <div className="w-9 h-9 rounded-lg bg-[#eff6ff] flex items-center justify-center group-hover:bg-[#dbeafe] transition-colors duration-200">
@@ -77,13 +77,13 @@ function Contact() {
                   </svg>
                 </div>
                 {/* TODO: Replace with your actual email address */}
-                your.email@example.com
+               ajobamushia@gmail.com
               </a>
 
               {/* LinkedIn */}
               {/* TODO: Replace href with your LinkedIn profile URL e.g. 'https://linkedin.com/in/yourname' */}
               <a
-                href="https://linkedin.com/in/yourname"
+                href="https://www.linkedin.com/in/adjoba-cobbold/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-slate-600 hover:text-[#3b82f6] transition-colors duration-200 group"
@@ -94,13 +94,13 @@ function Contact() {
                   </svg>
                 </div>
                 {/* TODO: Replace with your actual LinkedIn display text */}
-                linkedin.com/in/yourname
+                linkedin.com/in/adjoba-cobbold
               </a>
 
               {/* GitHub */}
               {/* TODO: Replace href with your GitHub profile URL e.g. 'https://github.com/yourusername' */}
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/cobbold-m"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-slate-600 hover:text-[#3b82f6] transition-colors duration-200 group"
@@ -111,7 +111,7 @@ function Contact() {
                   </svg>
                 </div>
                 {/* TODO: Replace with your actual GitHub display text */}
-                github.com/yourusername
+                github.com/cobbold-m
               </a>
             </div>
           </div>
