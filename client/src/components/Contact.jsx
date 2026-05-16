@@ -3,14 +3,25 @@ import emailjs from '@emailjs/browser';
 
 const INITIAL_FORM = { name: '', email: '', message: '' };
 
-// EmailJS credentials — override via environment variables if needed
 const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  || 'service_bntrl4v';
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_zfm182b';
 const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || '3ThcvKnDzgbOzO0H0';
 
+// Log credential source on load so you can verify in browser console
+console.log('[EmailJS] Config check:', {
+  SERVICE_ID,
+  TEMPLATE_ID,
+  PUBLIC_KEY,
+  fromEnv: {
+    service:  !!import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    template: !!import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    key:      !!import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+  },
+});
+
 function Contact() {
   const [form, setForm] = useState(INITIAL_FORM);
-  const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
+  const [status, setStatus] = useState('idle');
   const [errorMsg, setErrorMsg] = useState('');
 
   const handleChange = (e) => {
@@ -22,8 +33,10 @@ function Contact() {
     setStatus('loading');
     setErrorMsg('');
 
+    console.log('[EmailJS] Attempting send with:', { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY });
+
     try {
-      await emailjs.send(
+      const result = await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
         {
@@ -36,13 +49,18 @@ function Contact() {
         PUBLIC_KEY
       );
 
+      console.log('[EmailJS] Success:', result.status, result.text);
       setStatus('success');
       setForm(INITIAL_FORM);
     } catch (err) {
-      console.error('EmailJS error:', err);
-      const reason = err?.text || err?.message || 'Unknown error';
+      console.error('[EmailJS] Full error object:', err);
+      console.error('[EmailJS] Status:', err?.status);
+      console.error('[EmailJS] Text:', err?.text);
+      console.error('[EmailJS] Message:', err?.message);
+
+      const reason = err?.text || err?.message || `status ${err?.status}` || 'Unknown error';
       setStatus('error');
-      setErrorMsg(`Failed to send message (${reason}). Please email me directly at ajobamushia@gmail.com`);
+      setErrorMsg(`Send failed: ${reason}. Please email ajobamushia@gmail.com directly.`);
     }
   };
 
