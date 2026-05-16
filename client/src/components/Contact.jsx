@@ -57,7 +57,7 @@ function Contact() {
             <h3 className="text-lg font-semibold text-[#1e3a5f]">Let's connect</h3>
             <p className="text-slate-600 text-sm leading-relaxed">
               I'm open to full-time opportunities, freelance data projects, and collaborative work
-              in FinTech and data analytics. Drop me a message and I'll reply within 24 hours.
+              in finance, fintech and data analytics. Drop me a message and I'll reply within 24 hours.
             </p>
 
             <div className="space-y-4">
@@ -147,7 +147,7 @@ function Contact() {
                     required
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="Jane Smith"
+                    placeholder="Kwaku O. Kuffuor"
                     className={inputBase}
                   />
                 </div>
@@ -164,7 +164,7 @@ function Contact() {
                     required
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="jane@example.com"
+                    placeholder="kwaku.k@example.com"
                     className={inputBase}
                   />
                 </div>
