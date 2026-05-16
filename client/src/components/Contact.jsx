@@ -40,8 +40,9 @@ function Contact() {
       setForm(INITIAL_FORM);
     } catch (err) {
       console.error('EmailJS error:', err);
+      const reason = err?.text || err?.message || 'Unknown error';
       setStatus('error');
-      setErrorMsg('Failed to send your message. Please try emailing me directly at ajobamushia@gmail.com');
+      setErrorMsg(`Failed to send message (${reason}). Please email me directly at ajobamushia@gmail.com`);
     }
   };
 
