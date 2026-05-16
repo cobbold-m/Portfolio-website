@@ -21,7 +21,7 @@ function About() {
               I hold an <strong className="text-[#1e3a5f]">MSc in Finance &amp; FinTech</strong> and
               have built my career across finance, real estate operations, and customer-facing
               advisory roles. That breadth of experience has given me a strong instinct for what
-              problems actually matter — and how data can help solve them.
+              problems actually matter and how data can help solve them.
             </p>
             <p>
               I am now channelling that experience into <strong className="text-[#1e3a5f]">data
@@ -31,16 +31,14 @@ function About() {
               impact.
             </p>
             <p>
-              Whether it is uncovering patterns in financial data, building ESG dashboards, or
-              designing A/B tests for FinTech products, I approach every project with curiosity,
-              structure, and a focus on clear communication of results.
+              Whether it is uncovering patterns in financial data, building machine learning models,
+              or digging into the research behind financial innovation, I approach every project with
+              curiosity, structure, and a focus on clear communication of results.
             </p>
             <p>
-              I am actively looking for roles where I can contribute as a{' '}
-              <strong className="text-[#1e3a5f]">Data Analyst</strong>,{' '}
-              <strong className="text-[#1e3a5f]">Business Analyst</strong>, or{' '}
-              <strong className="text-[#1e3a5f]">Technical Product Manager</strong> — ideally in
-              FinTech, financial services, or a data-driven environment.
+              My goal is to use data, technology, and financial insight to build practical solutions,
+              uncover meaningful patterns, and communicate ideas clearly across finance and business
+              contexts.
             </p>
           </div>
 
