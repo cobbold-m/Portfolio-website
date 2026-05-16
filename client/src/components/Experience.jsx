@@ -70,50 +70,10 @@ function Experience() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10">
-          <div>
-            {experience.map((item, index) => (
-              <ExperienceCard key={item.id} item={item} index={index} />
-            ))}
-          </div>
-
-          {/* Right column — summary panel */}
-          <div className="hidden lg:flex flex-col gap-5 pt-2">
-            <div className="bg-[#1e3a5f] rounded-2xl p-6 text-white">
-              <p className="text-xs font-semibold uppercase tracking-widest text-blue-300 mb-3">Career snapshot</p>
-              <div className="space-y-4">
-                {[
-                  { label: 'Sectors', value: 'Finance · Real Estate · Public Sector' },
-                  { label: 'Locations', value: 'United Kingdom · South Africa' },
-                  { label: 'Focus', value: 'Data, FinTech & Product Roles' },
-                ].map((row) => (
-                  <div key={row.label} className="border-t border-white/10 pt-3">
-                    <p className="text-xs text-blue-300 font-medium mb-0.5">{row.label}</p>
-                    <p className="text-sm text-white font-semibold">{row.value}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="bg-[#f8fafc] border border-[#e2e8f0] rounded-2xl p-5">
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#3b82f6] mb-3">What I bring</p>
-              <ul className="space-y-2">
-                {[
-                  'Strong analytical and communication skills',
-                  'Cross-sector experience across UK and Africa',
-                  'Ability to translate data into business decisions',
-                  'Detail-oriented with a structured approach',
-                ].map((point) => (
-                  <li key={point} className="flex items-start gap-2 text-sm text-slate-600">
-                    <svg className="w-4 h-4 text-[#3b82f6] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+        <div className="max-w-3xl">
+          {experience.map((item, index) => (
+            <ExperienceCard key={item.id} item={item} index={index} />
+          ))}
         </div>
       </div>
     </section>

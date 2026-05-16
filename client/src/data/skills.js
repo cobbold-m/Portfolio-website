@@ -38,13 +38,8 @@ const skills = [
     icon: '🛠️',
     items: [
       'VS Code',
-      'Python',
-      'R',
-      'Excel',
-      'GitHub',
-      'Power BI',
-      'SQL',
-      'Bloomberg',
+      'Jupyter Notebook',
+      'Google Colab',
     ],
   },
 ];
