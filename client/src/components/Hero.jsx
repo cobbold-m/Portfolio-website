@@ -26,7 +26,7 @@ function Hero() {
           {/* TODO: Replace [YOUR NAME] with your actual full name */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1e3a5f] leading-tight mb-4">
             Hi, I'm{' '}
-            <span className="text-[#3b82f6]">[YOUR NAME]</span>
+            <span className="text-[#3b82f6]">[Adjoba Mushia Cobbold]</span>
           </h1>
 
           {/* Headline */}
@@ -55,7 +55,7 @@ function Hero() {
             {/* Download CV */}
             {/* TODO: Replace the href with the actual path to your CV file, e.g. '/cv/YourName_CV.pdf' */}
             <a
-              href="/cv/your-cv.pdf"
+              href="'/Users/ajobamushia/Desktop/CV/ADJOBA COBBOLD M.pdf'"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 border-2 border-[#1e3a5f] text-[#1e3a5f] font-medium rounded-lg hover:bg-[#1e3a5f] hover:text-white transition-all duration-200"
@@ -66,7 +66,7 @@ function Hero() {
             {/* LinkedIn */}
             {/* TODO: Replace href with your LinkedIn profile URL e.g. 'https://linkedin.com/in/yourname' */}
             <a
-              href="https://linkedin.com/in/yourname"
+              href="https://www.linkedin.com/in/adjoba-cobbold/"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 border border-[#e2e8f0] text-slate-600 font-medium rounded-lg hover:border-[#3b82f6] hover:text-[#3b82f6] transition-all duration-200 flex items-center gap-2"
@@ -80,7 +80,7 @@ function Hero() {
             {/* GitHub */}
             {/* TODO: Replace href with your GitHub profile URL e.g. 'https://github.com/yourusername' */}
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/cobbold-m"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 border border-[#e2e8f0] text-slate-600 font-medium rounded-lg hover:border-[#3b82f6] hover:text-[#3b82f6] transition-all duration-200 flex items-center gap-2"
