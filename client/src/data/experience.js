@@ -30,7 +30,7 @@ const experience = [
       'Delivered presentations at open days and campus events, representing the university.',
       'Strengthened public speaking, documentation, and interpersonal skills.',
     ],
-    companyUrl: 'https://www.reading.ac.uk'/,
+    companyUrl: 'https://www.reading.ac.uk/',
   },
 ];
 
