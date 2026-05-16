@@ -55,10 +55,9 @@ function Footer() {
               Connect
             </p>
             <ul className="space-y-2">
-              {/* TODO: Replace href with your actual LinkedIn URL */}
               <li>
                 <a
-                  href="https://linkedin.com/in/yourname"
+                  href="https://www.linkedin.com/in/adjoba-cobbold/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors duration-200"
@@ -70,10 +69,9 @@ function Footer() {
                 </a>
               </li>
 
-              {/* TODO: Replace href with your actual GitHub URL */}
               <li>
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/cobbold-m"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors duration-200"
@@ -85,10 +83,9 @@ function Footer() {
                 </a>
               </li>
 
-              {/* TODO: Replace href with your actual email */}
               <li>
                 <a
-                  href="mailto:your.email@example.com"
+                  href="mailto:ajobamushia@gmail.com"
                   className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors duration-200"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
