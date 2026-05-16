@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const INITIAL_FORM = { name: '', email: '', message: '' };
+
+// EmailJS credentials are stored in environment variables (client/.env)
+const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 function Contact() {
   const [form, setForm] = useState(INITIAL_FORM);
@@ -17,22 +23,25 @@ function Contact() {
     setErrorMsg('');
 
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-      const data = await res.json();
-
-      if (!res.ok || !data.success) {
-        throw new Error(data.error || 'Something went wrong. Please try again.');
-      }
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          from_name:  form.name,
+          from_email: form.email,
+          message:    form.message,
+          to_email:   'ajobamushia@gmail.com',
+          reply_to:   form.email,
+        },
+        PUBLIC_KEY
+      );
 
       setStatus('success');
       setForm(INITIAL_FORM);
     } catch (err) {
+      console.error('EmailJS error:', err);
       setStatus('error');
-      setErrorMsg(err.message);
+      setErrorMsg('Failed to send your message. Please try emailing me directly at ajobamushia@gmail.com');
     }
   };
 
@@ -62,7 +71,6 @@ function Contact() {
 
             <div className="space-y-4">
               {/* Email */}
-              {/* TODO: Replace the href and visible email with your actual email address */}
               <a
                 href="mailto:ajobamushia@gmail.com"
                 className="flex items-center gap-3 text-sm text-slate-600 hover:text-[#3b82f6] transition-colors duration-200 group"
@@ -73,12 +81,10 @@ function Contact() {
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                {/* TODO: Replace with your actual email address */}
-               ajobamushia@gmail.com
+                ajobamushia@gmail.com
               </a>
 
               {/* LinkedIn */}
-              {/* TODO: Replace href with your LinkedIn profile URL e.g. 'https://linkedin.com/in/yourname' */}
               <a
                 href="https://www.linkedin.com/in/adjoba-cobbold/"
                 target="_blank"
@@ -90,12 +96,10 @@ function Contact() {
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                   </svg>
                 </div>
-                {/* TODO: Replace with your actual LinkedIn display text */}
                 linkedin.com/in/adjoba-cobbold
               </a>
 
               {/* GitHub */}
-              {/* TODO: Replace href with your GitHub profile URL e.g. 'https://github.com/yourusername' */}
               <a
                 href="https://github.com/cobbold-m"
                 target="_blank"
@@ -107,7 +111,6 @@ function Contact() {
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                   </svg>
                 </div>
-                {/* TODO: Replace with your actual GitHub display text */}
                 github.com/cobbold-m
               </a>
             </div>
@@ -203,8 +206,7 @@ function Contact() {
                     <>
                       <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                        <path className="opacity-75" fill="currentColor"
-                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                       </svg>
                       Sending...
                     </>
