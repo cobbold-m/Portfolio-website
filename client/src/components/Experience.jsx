@@ -17,7 +17,7 @@ function ExperienceCard({ item, index }) {
 
       {/* Card */}
       <div className="pb-10 flex-1">
-        <div className="bg-white rounded-2xl border border-[#e8e4de] hover:shadow-xl hover:shadow-amber-100/40 transition-all duration-300 overflow-hidden">
+        <div className="bg-white rounded-3xl shadow-sm hover:shadow-xl hover:shadow-amber-100/50 hover:-translate-y-0.5 transition-all duration-300 overflow-hidden">
           <div className="h-1 bg-gradient-to-r from-[#1e3a5f] via-[#3b82f6] to-[#c9a84c]" />
           <div className="p-6">
             <div className="flex flex-wrap items-start justify-between gap-2 mb-1">

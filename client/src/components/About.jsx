@@ -16,18 +16,16 @@ function About() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className="reveal-section">
 
-          {/* Section header */}
           <div className="flex items-center gap-4 mb-12">
             <div className="w-1 h-12 rounded-full bg-gradient-to-b from-[#1e3a5f] to-[#c9a84c]" />
             <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-[#c9a84c]">About Me</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1e3a5f] leading-tight">Background &amp; Mission</h2>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1e3a5f] leading-tight">About Me</h2>
             </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-            {/* Body text */}
             <div className="space-y-5 text-[#4b5563] leading-relaxed text-base">
               <p>
                 I hold an <strong className="text-[#1e3a5f]">MSc in Finance &amp; FinTech</strong> and
@@ -53,11 +51,10 @@ function About() {
               </p>
             </div>
 
-            {/* Highlight cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {highlights.map((item) => (
                 <div key={item.label}
-                  className="p-5 rounded-xl border border-[#e8e4de] bg-[#fdf9f4] hover:border-l-4 hover:border-l-[#c9a84c] hover:shadow-md hover:shadow-amber-100/50 transition-all duration-200 group">
+                  className="p-5 rounded-2xl bg-[#fdf9f4] shadow-sm hover:shadow-lg hover:shadow-amber-100/50 hover:-translate-y-1 transition-all duration-300 group">
                   <div className="text-2xl mb-3">{item.icon}</div>
                   <h3 className="text-sm font-semibold text-[#1e3a5f] mb-1.5">{item.label}</h3>
                   <p className="text-sm text-[#4b5563] leading-snug">{item.detail}</p>

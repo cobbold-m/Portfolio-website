@@ -56,7 +56,7 @@ function Skills() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {skills.map((group) => (
               <div key={group.category}
-                className={`bg-white rounded-xl border border-[#e8e4de] border-l-4 ${categoryBorder[group.category] || 'border-l-[#1e3a5f]'} overflow-hidden hover:shadow-lg hover:shadow-amber-100/40 transition-all duration-300`}>
+                className={`bg-white rounded-2xl shadow-sm border-l-4 ${categoryBorder[group.category] || 'border-l-[#1e3a5f]'} overflow-hidden hover:shadow-lg hover:shadow-amber-100/50 hover:-translate-y-1 transition-all duration-300`}>
                 <div className="px-5 pt-5 pb-3 flex items-center gap-2.5">
                   <span className="text-[#1e3a5f]">{categoryIcons[group.category]}</span>
                   <h3 className="text-sm font-bold text-[#1e3a5f] leading-tight">{group.category}</h3>

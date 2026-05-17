@@ -4,7 +4,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 function ProjectCard({ project }) {
   return (
-    <div className="bg-white rounded-2xl border border-[#e8e4de] hover:shadow-xl hover:shadow-amber-100/40 hover:-translate-y-0.5 transition-all duration-300 flex flex-col overflow-hidden group">
+    <div className="bg-white rounded-3xl shadow-sm hover:shadow-xl hover:shadow-amber-100/50 hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden group">
       <div className="h-1 bg-gradient-to-r from-[#1e3a5f] via-[#3b82f6] to-[#c9a84c]" />
 
       <div className="p-7 flex flex-col flex-1">
@@ -14,7 +14,7 @@ function ProjectCard({ project }) {
 
         <p className="text-sm text-[#4b5563] leading-relaxed mb-4">{project.description}</p>
 
-        <div className="mb-5 p-3.5 rounded-xl bg-[#fef9ec] border border-[#e8d5a0]">
+        <div className="mb-5 p-3.5 rounded-2xl bg-[#fef9ec] border border-[#e8d5a0]">
           <p className="text-xs font-bold text-[#c9a84c] uppercase tracking-wider mb-1.5">Problem Solved</p>
           <p className="text-xs text-[#6b5a2a] leading-relaxed">{project.problem}</p>
         </div>
@@ -22,7 +22,7 @@ function ProjectCard({ project }) {
         <div className="flex flex-wrap gap-2 mb-6">
           {project.tools.map((tool) => (
             <span key={tool}
-              className="px-2.5 py-1 text-xs font-medium bg-[#faf9f7] text-[#4b5563] rounded-full border border-[#e8e4de]">
+              className="px-3 py-1 text-xs font-medium bg-[#faf9f7] text-[#4b5563] rounded-full border border-[#e8e4de]">
               {tool}
             </span>
           ))}

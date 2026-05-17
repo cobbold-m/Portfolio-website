@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const stats = [
   { value: '4+', label: 'Projects' },
@@ -6,6 +6,36 @@ const stats = [
   { value: '3+', label: 'Roles' },
   { value: 'SQL · Python · BI', label: 'Core Stack' },
 ];
+
+const nowItems = [
+  { dot: '#c9a84c', text: 'Applying ML to financial datasets' },
+  { dot: '#1e3a5f', text: 'Deepening SQL, Python & Power BI skills' },
+  { dot: '#6b7280', text: 'Open to data analyst & TPM roles' },
+];
+
+function ProfilePhoto() {
+  const [errored, setErrored] = useState(false);
+  return (
+    <div className="relative flex justify-center">
+      <div className="relative">
+        <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-[#fdf3da] via-[#fdf8f2] to-[#e8f0f8] blur-md" />
+        {!errored ? (
+          <img
+            src="/images/profile.jpg"
+            alt="Adjoba Mushia Cobbold"
+            onError={() => setErrored(true)}
+            className="relative w-44 h-44 rounded-full object-cover object-top shadow-2xl ring-4 ring-white"
+          />
+        ) : (
+          <div className="relative w-44 h-44 rounded-full bg-gradient-to-br from-[#1e3a5f] to-[#2a4f7f] flex items-center justify-center shadow-2xl ring-4 ring-white">
+            <span className="text-3xl font-black text-white/90 tracking-tight">AMC</span>
+          </div>
+        )}
+        <span className="absolute bottom-2 right-2 w-4 h-4 rounded-full bg-[#c9a84c] border-2 border-white shadow-sm" title="Open to work" />
+      </div>
+    </div>
+  );
+}
 
 function Hero() {
   const handleScroll = (e, href) => {
@@ -19,7 +49,6 @@ function Hero() {
       id="hero"
       className="min-h-screen flex items-center bg-gradient-to-br from-[#fdf8f2] via-[#faf9f7] to-[#eef2f8] pt-16 relative overflow-hidden"
     >
-      {/* Dot grid — bottom-left, very subtle */}
       <div className="absolute bottom-20 left-0 w-52 h-52 pointer-events-none opacity-[0.04]" aria-hidden="true">
         <svg viewBox="0 0 208 208" fill="none" xmlns="http://www.w3.org/2000/svg">
           {Array.from({ length: 6 }).map((_, row) =>
@@ -35,13 +64,11 @@ function Hero() {
 
           {/* Left column */}
           <div>
-            {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-[#c9a84c]/40 rounded-full mb-7 animate-fade-in delay-100 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-[#c9a84c] animate-pulse" />
               <span className="text-xs font-medium text-[#1e3a5f] tracking-wide uppercase">Open to opportunities</span>
             </div>
 
-            {/* Name */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-[#1a2332] tracking-tight leading-[1.05] mb-5 animate-fade-up delay-200">
               Hi, I'm{' '}
               <span className="relative inline-block">
@@ -87,35 +114,37 @@ function Hero() {
           </div>
 
           {/* Right column */}
-          <div className="hidden lg:flex flex-col gap-4 animate-slide-right delay-300">
-            {/* Feature card */}
-            <div className="bg-[#1e3a5f] rounded-2xl p-6 text-white relative overflow-hidden border-l-4 border-[#c9a84c]/60">
-              <div className="absolute top-0 right-0 w-32 h-32 opacity-[0.06]" aria-hidden="true">
-                <svg viewBox="0 0 128 128" fill="none">
-                  <circle cx="96" cy="32" r="60" stroke="white" strokeWidth="1.5" />
-                  <circle cx="96" cy="32" r="35" stroke="white" strokeWidth="1" />
-                </svg>
-              </div>
-              <p className="text-lg font-bold leading-snug">Data Analytics &amp; FinTech Solutions</p>
-              <p className="text-sm text-blue-200/80 mt-2 leading-relaxed">
-                Combining financial expertise with hands-on data skills to drive insight and impact.
-              </p>
+          <div className="hidden lg:flex flex-col gap-5 animate-slide-right delay-300">
+
+            <ProfilePhoto />
+
+            {/* Currently card */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-sm border border-[#f0ece6]">
+              <p className="text-xs font-bold text-[#c9a84c] uppercase tracking-widest mb-3.5">Currently</p>
+              <ul className="space-y-2.5">
+                {nowItems.map((item) => (
+                  <li key={item.text} className="flex items-center gap-2.5 text-sm text-[#4b5563]">
+                    <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: item.dot }} />
+                    {item.text}
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* Stats grid */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3">
               {stats.map((s) => (
                 <div key={s.label}
-                  className="bg-white border border-[#e8e4de] rounded-xl p-4 hover:border-[#c9a84c] hover:shadow-md hover:shadow-amber-100/50 transition-all duration-200">
-                  <p className="text-2xl font-bold text-[#1e3a5f]">{s.value}</p>
-                  <p className="text-xs text-[#4b5563] mt-0.5 font-medium">{s.label}</p>
+                  className="bg-white rounded-2xl shadow-sm p-4 hover:shadow-md hover:shadow-amber-100/50 hover:-translate-y-0.5 transition-all duration-200">
+                  <p className="text-xl font-bold text-[#1e3a5f]">{s.value}</p>
+                  <p className="text-xs text-[#6b7280] mt-0.5 font-medium leading-tight">{s.label}</p>
                 </div>
               ))}
             </div>
 
             {/* Scroll hint */}
             <a href="#about" onClick={(e) => handleScroll(e, '#about')}
-              className="flex items-center gap-2 text-[#4b5563] hover:text-[#c9a84c] transition-colors duration-200 text-xs font-medium tracking-widest uppercase mt-2">
+              className="flex items-center gap-2 text-[#4b5563] hover:text-[#c9a84c] transition-colors duration-200 text-xs font-medium tracking-widest uppercase">
               <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
