@@ -7,18 +7,6 @@ const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  || 'service_bntrl4v
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_uw5adcb';
 const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || '3ThcvKnDzgbOzO0H0';
 
-// Log credential source on load so you can verify in browser console
-console.log('[EmailJS] Config check:', {
-  SERVICE_ID,
-  TEMPLATE_ID,
-  PUBLIC_KEY,
-  fromEnv: {
-    service:  !!import.meta.env.VITE_EMAILJS_SERVICE_ID,
-    template: !!import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-    key:      !!import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-  },
-});
-
 function Contact() {
   const [form, setForm] = useState(INITIAL_FORM);
   const [status, setStatus] = useState('idle');
@@ -32,8 +20,6 @@ function Contact() {
     e.preventDefault();
     setStatus('loading');
     setErrorMsg('');
-
-    console.log('[EmailJS] Attempting send with:', { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY });
 
     try {
       const result = await emailjs.send(
@@ -52,11 +38,6 @@ function Contact() {
       setStatus('success');
       setForm(INITIAL_FORM);
     } catch (err) {
-      console.error('[EmailJS] Full error object:', err);
-      console.error('[EmailJS] Status:', err?.status);
-      console.error('[EmailJS] Text:', err?.text);
-      console.error('[EmailJS] Message:', err?.message);
-
       const reason = err?.text || err?.message || `status ${err?.status}` || 'Unknown error';
       setStatus('error');
       setErrorMsg(`Send failed: ${reason}. Please email ajobamushia@gmail.com directly.`);

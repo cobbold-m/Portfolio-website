@@ -96,8 +96,6 @@ function Footer() {
                 </a>
               </li>
 
-              {/* Download CV */}
-              {/* TODO: Replace href with your actual CV file path e.g. '/cv/YourName_CV.pdf' */}
               <li>
                 <a
                   href="/cv/ADJOBA_COBBOLD_M.pdf"

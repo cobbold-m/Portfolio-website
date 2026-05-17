@@ -19,7 +19,7 @@ const projects = [
     problem:
       'Financial institutions need fast, scalable ways to query and analyse large transaction datasets.',
     tools: ['SQL', 'PostgreSQL', 'Excel'],
-    githubUrl: null, // TODO: Replace with your GitHub repo URL
+    githubUrl: null,
     demoUrl: null,
   },
   {
@@ -30,7 +30,7 @@ const projects = [
     problem:
       'ESG data is often scattered and hard to interpret; this dashboard centralises and visualises it clearly.',
     tools: ['Power BI', 'Excel', 'DAX'],
-    githubUrl: null, // TODO: Replace with your GitHub repo URL
+    githubUrl: null,
     demoUrl: null,
   },
   {
@@ -41,7 +41,7 @@ const projects = [
     problem:
       'Product teams need statistical rigour to validate design decisions — this case study demonstrates that process end to end.',
     tools: ['Python', 'SciPy', 'Pandas', 'Jupyter Notebook'],
-    githubUrl: null, // TODO: Replace with your GitHub repo URL
+    githubUrl: null,
     demoUrl: null,
   },
 ];
