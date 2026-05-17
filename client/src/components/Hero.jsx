@@ -42,26 +42,26 @@ function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#eff6ff] border border-[#bfdbfe] rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#eff6ff] border border-[#bfdbfe] rounded-full mb-6 animate-fade-in delay-100">
               <span className="w-2 h-2 rounded-full bg-[#c9a84c] animate-pulse" />
               <span className="text-xs font-medium text-[#1e3a5f] tracking-wide uppercase">Open to opportunities</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-[#1e3a5f] leading-tight mb-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-[#1e3a5f] leading-tight mb-4 animate-fade-up delay-200">
               Hi, I'm Adjoba Mushia Cobbold
             </h1>
 
-            <h2 className="text-base sm:text-lg font-medium text-slate-500 mb-5 leading-relaxed">
+            <h2 className="text-base sm:text-lg font-medium text-slate-500 mb-5 leading-relaxed animate-fade-up delay-300">
               MSc Finance &amp; FinTech &nbsp;·&nbsp; Aspiring Data Analyst / Technical Product Manager
             </h2>
 
-            <p className="text-base text-slate-600 leading-relaxed mb-8 max-w-lg">
+            <p className="text-base text-slate-600 leading-relaxed mb-8 max-w-lg animate-fade-up delay-400">
               I bridge the gap between financial insight and data-driven decision making —
               building expertise in SQL, Python, Power BI, and product analytics while
               applying my MSc background to real-world problems.
             </p>
 
-            <div className="flex flex-nowrap gap-2 overflow-x-auto pb-1">
+            <div className="flex flex-nowrap gap-2 overflow-x-auto pb-1 animate-fade-up delay-500">
               <a href="#projects" onClick={(e) => handleScroll(e, '#projects')}
                 className="flex-shrink-0 px-4 py-2.5 bg-[#1e3a5f] text-white font-medium rounded-lg hover:bg-[#2a4f7f] transition-all duration-200 shadow-sm hover:shadow-md text-sm">
                 View Projects
@@ -83,7 +83,7 @@ function Hero() {
             </div>
           </div>
 
-          <div className="hidden lg:flex flex-col gap-4">
+          <div className="hidden lg:flex flex-col gap-4 animate-slide-right delay-300">
             <div className="bg-[#1e3a5f] rounded-2xl p-6 text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 opacity-10" aria-hidden="true">
                 <svg viewBox="0 0 128 128" fill="none">
