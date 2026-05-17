@@ -43,7 +43,6 @@ function Contact() {
           from_name:  form.name,
           from_email: form.email,
           message:    form.message,
-          to_email:   'ajobamushia@gmail.com',
           reply_to:   form.email,
         },
         PUBLIC_KEY
