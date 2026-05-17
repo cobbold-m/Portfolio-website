@@ -149,7 +149,7 @@ function Contact() {
                     required
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="Kwaku O. Kuffuor"
+                    placeholder="Kwaku Baron"
                     className={inputBase}
                   />
                 </div>
@@ -166,7 +166,7 @@ function Contact() {
                     required
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="kwaku.k@example.com"
+                    placeholder="kwakub@example.com"
                     className={inputBase}
                   />
                 </div>
