@@ -17,8 +17,8 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
-  color: #1e293b;
+  background-color: #faf9f7;
+  color: #4b5563;
 }
 
 /* ── Entrance animations ── */
@@ -56,20 +56,31 @@ body {
 .delay-600 { animation-delay: 0.6s; }
 .delay-700 { animation-delay: 0.7s; }
 
+/* ── Scroll reveal ── */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal-section.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: #faf9f7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #d6d0c8;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #b5aea4;
 }
