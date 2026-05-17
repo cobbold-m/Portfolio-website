@@ -7,7 +7,6 @@ import Projects from './components/Projects.jsx';
 import Experience from './components/Experience.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
-import SectionDivider from './components/SectionDivider.jsx';
 
 function App() {
   return (
@@ -15,15 +14,10 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <SectionDivider />
         <About />
-        <SectionDivider />
         <Skills />
-        <SectionDivider />
         <Projects />
-        <SectionDivider />
         <Experience />
-        <SectionDivider />
         <Contact />
       </main>
       <Footer />
