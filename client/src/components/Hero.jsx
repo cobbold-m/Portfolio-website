@@ -21,7 +21,7 @@ function ProfilePhoto() {
         <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-[#fdf3da] via-[#fdf8f2] to-[#e8f0f8] blur-md" />
         {!errored ? (
           <img
-            src="/images/profile.jpg"
+            src="/5ddaea74-b56b-432a-b76e-a91ac8f89159.PNG"
             alt="Adjoba Mushia Cobbold"
             onError={() => setErrored(true)}
             className="relative w-44 h-44 rounded-full object-cover object-top shadow-2xl ring-4 ring-white"
