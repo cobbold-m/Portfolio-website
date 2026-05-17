@@ -18,11 +18,14 @@ function Footer() {
   };
 
   return (
-    <footer className="bg-[#162d4a] text-white">
+    <footer className="relative bg-gradient-to-br from-[#0b1825] via-[#162d4a] to-[#1e3858] text-white overflow-hidden">
+      {/* Decorative radial glow */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#c9a84c]/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#1e3a5f]/60 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
       {/* Gold top accent */}
-      <div className="h-0.5 bg-gradient-to-r from-transparent via-[#c9a84c]/60 to-transparent" />
+      <div className="h-0.5 bg-gradient-to-r from-transparent via-[#c9a84c]/70 to-transparent" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 relative z-10">
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 mb-12">
 
           {/* Brand */}
@@ -98,8 +101,8 @@ function Footer() {
         </div>
 
         <div className="border-t border-[#c9a84c]/20 pt-7 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-slate-500">&copy; {year} Adjoba Mushia Cobbold. All rights reserved.</p>
-          <p className="text-xs text-slate-600">Built with React &amp; Tailwind CSS</p>
+          <p className="text-xs text-slate-400">&copy; {year} Adjoba Mushia Cobbold. All rights reserved.</p>
+          <p className="text-xs text-slate-500">Built with React &amp; Tailwind CSS</p>
         </div>
       </div>
     </footer>
