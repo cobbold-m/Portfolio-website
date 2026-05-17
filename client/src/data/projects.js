@@ -14,6 +14,7 @@ const projects = [
   {
     id: 2,
     inProgress: true,
+    progress: 70,
     title: 'SQL Financial Transactions Analysis',
     description:
       'Analysed a financial transactions dataset using SQL to uncover spending patterns, detect anomalies, and generate business insights.',
@@ -26,6 +27,7 @@ const projects = [
   {
     id: 3,
     inProgress: true,
+    progress: 50,
     title: 'Power BI ESG Dashboard',
     description:
       'Designed an interactive Power BI dashboard visualising ESG metrics across sectors, enabling stakeholders to compare company sustainability performance.',
@@ -38,6 +40,7 @@ const projects = [
   {
     id: 4,
     inProgress: true,
+    progress: 40,
     title: 'A/B Testing Case Study for FinTech User Conversion',
     description:
       'Conducted a structured A/B test to evaluate the impact of UI changes on user sign-up conversion rates for a hypothetical FinTech app.',

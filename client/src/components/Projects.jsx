@@ -8,17 +8,9 @@ function ProjectCard({ project }) {
       <div className="h-1 bg-gradient-to-r from-[#1e3a5f] via-[#3b82f6] to-[#c9a84c]" />
 
       <div className="p-7 flex flex-col flex-1">
-        <div className="flex items-start justify-between gap-3 mb-3">
-          <h3 className="text-base font-bold text-[#1a2332] leading-snug group-hover:text-[#1e3a5f] transition-colors duration-200">
-            {project.title}
-          </h3>
-          {project.inProgress && (
-            <span className="flex-shrink-0 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-              In Progress
-            </span>
-          )}
-        </div>
+        <h3 className="text-base font-bold text-[#1a2332] mb-3 leading-snug group-hover:text-[#1e3a5f] transition-colors duration-200">
+          {project.title}
+        </h3>
 
         <p className="text-sm text-[#4b5563] leading-relaxed mb-4">{project.description}</p>
 
@@ -36,7 +28,25 @@ function ProjectCard({ project }) {
           ))}
         </div>
 
-        <div className="mt-auto flex gap-3">
+        {project.inProgress && (
+          <div className="mt-auto mb-5">
+            <div className="flex items-center justify-between mb-1.5">
+              <span className="text-xs font-semibold text-[#c9a84c] uppercase tracking-wider flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#c9a84c] animate-pulse" />
+                In Progress
+              </span>
+              <span className="text-xs font-medium text-[#6b7280]">{project.progress}%</span>
+            </div>
+            <div className="h-2 w-full bg-[#f0ece6] rounded-full overflow-hidden">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-[#1e3a5f] to-[#c9a84c] transition-all duration-500"
+                style={{ width: `${project.progress}%` }}
+              />
+            </div>
+          </div>
+        )}
+
+        <div className={`flex gap-3 ${project.inProgress ? '' : 'mt-auto'}`}>
           <a
             href={project.githubUrl || '#'}
             target={project.githubUrl ? '_blank' : '_self'}
