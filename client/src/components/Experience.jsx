@@ -62,7 +62,7 @@ function Experience() {
           </div>
         </div>
 
-        <div className="max-w-3xl">
+        <div>
           {experience.map((item, index) => (
             <ExperienceCard key={item.id} item={item} index={index} />
           ))}
