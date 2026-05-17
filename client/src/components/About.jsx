@@ -26,28 +26,20 @@ function About() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-            <div className="space-y-5 text-[#4b5563] leading-relaxed text-base">
+            <div className="space-y-4 text-[#4b5563] leading-relaxed text-base">
               <p>
                 I hold an <strong className="text-[#1e3a5f]">MSc in Finance &amp; FinTech</strong> and
-                have built my career across finance, real estate operations, and customer-facing
-                advisory roles. That breadth of experience has given me a strong instinct for what
-                problems actually matter and how data can help solve them.
+                have worked across finance, real estate, and customer-facing advisory roles — giving me
+                a strong instinct for what problems actually matter and how data can help solve them.
               </p>
               <p>
-                I am now channelling that experience into{' '}
-                <strong className="text-[#1e3a5f]">data analytics and technical product management</strong>,
-                building hands-on skills in SQL, Python, Power BI, machine learning, and product analytics.
-                I enjoy working at the intersection of finance and technology, where rigorous thinking
-                meets practical impact.
+                I'm now channelling that into <strong className="text-[#1e3a5f]">data analytics and
+                technical product management</strong>, building hands-on skills in SQL, Python, Power BI,
+                and machine learning at the intersection of finance and technology.
               </p>
               <p>
-                Whether it is uncovering patterns in financial data, building machine learning models,
-                or digging into the research behind financial innovation, I approach every project with
-                curiosity, structure, and a focus on clear communication of results.
-              </p>
-              <p>
-                My goal is to use data, technology, and financial insight to build practical solutions,
-                uncover meaningful patterns, and communicate ideas clearly across finance and business contexts.
+                I approach every project with curiosity, structure, and a focus on communicating results
+                clearly — to technical and non-technical audiences alike.
               </p>
             </div>
 

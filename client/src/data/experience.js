@@ -4,7 +4,7 @@ const experience = [
   {
     id: 1,
     role: 'Junior Product Manager',
-    company: 'Achive by Petra',
+    company: 'Achieve by Petra',
     period: 'Sep 2024 – Sep 2025',
     location: 'Accra, Ghana',
     description:
