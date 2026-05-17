@@ -9,7 +9,7 @@ const projects = [
     problem: 'Political risk affects firms unevenly, yet most models treat it as a uniform shock. This project proved that firms respond heterogeneously to political uncertainty shocks.',
     tools: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib'],
     githubUrl: 'https://github.com/cobbold-m/Brexit-Political-Uncertainty-UK-Stock-Market-Analysis',
-    demoUrl: null,
+    demoUrl: 'https://brexitdemo-jfui37cg8jqdstgapgdxpu.streamlit.app/',
   },
   {
     id: 2,
