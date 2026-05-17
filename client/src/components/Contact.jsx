@@ -4,9 +4,10 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const INITIAL_FORM = { name: '', email: '', message: '' };
 
-const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  || 'service_bntrl4v';
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_uw5adcb';
-const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || '3ThcvKnDzgbOzO0H0';
+const SERVICE_ID       = import.meta.env.VITE_EMAILJS_SERVICE_ID  || 'service_bntrl4v';
+const TEMPLATE_ID      = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_uw5adcb';
+const NOTIFY_TEMPLATE  = 'template_lfaaopq';
+const PUBLIC_KEY       = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || '3ThcvKnDzgbOzO0H0';
 
 function Contact() {
   const ref = useScrollReveal();
@@ -24,18 +25,22 @@ function Contact() {
     setErrorMsg('');
 
     try {
-      const result = await emailjs.send(
+      const params = {
+        from_name:  form.name,
+        from_email: form.email,
+        message:    form.message,
+        reply_to:   form.email,
+      };
+
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, params, PUBLIC_KEY);
+
+      await emailjs.send(
         SERVICE_ID,
-        TEMPLATE_ID,
-        {
-          from_name:  form.name,
-          from_email: form.email,
-          message:    form.message,
-          reply_to:   form.email,
-        },
+        NOTIFY_TEMPLATE,
+        { name: form.name, email: form.email, message: form.message },
         PUBLIC_KEY
       );
-      console.log('[EmailJS] Success:', result.status, result.text);
+
       setStatus('success');
       setForm(INITIAL_FORM);
     } catch (err) {
@@ -153,7 +158,7 @@ function Contact() {
                     <input
                       id="name" name="name" type="text" required
                       value={form.name} onChange={handleChange}
-                      placeholder="Kwaku Baron"
+                      placeholder="Baron K"
                       className={inputBase}
                     />
                   </div>
