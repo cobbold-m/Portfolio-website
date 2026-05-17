@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 const INITIAL_FORM = { name: '', email: '', message: '' };
 
 const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  || 'service_bntrl4v';
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_zfm182b';
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_uw5adcb';
 const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || '3ThcvKnDzgbOzO0H0';
 
 // Log credential source on load so you can verify in browser console
