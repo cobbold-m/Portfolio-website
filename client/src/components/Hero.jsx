@@ -49,6 +49,7 @@ function Hero() {
       id="hero"
       className="min-h-screen flex items-center bg-gradient-to-br from-[#fdf8f2] via-[#faf9f7] to-[#eef2f8] pt-16 relative overflow-hidden"
     >
+      {/* Dot grid — bottom-left, very subtle */}
       <div className="absolute bottom-20 left-0 w-52 h-52 pointer-events-none opacity-[0.04]" aria-hidden="true">
         <svg viewBox="0 0 208 208" fill="none" xmlns="http://www.w3.org/2000/svg">
           {Array.from({ length: 6 }).map((_, row) =>
@@ -64,28 +65,34 @@ function Hero() {
 
           {/* Left column */}
           <div>
+            {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-[#c9a84c]/40 rounded-full mb-7 animate-fade-in delay-100 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-[#c9a84c] animate-pulse" />
               <span className="text-xs font-medium text-[#1e3a5f] tracking-wide uppercase">Open to opportunities</span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-[#1a2332] tracking-tight leading-[1.05] mb-5 animate-fade-up delay-200">
-              Hi, I'm{' '}
-              <span className="relative inline-block">
-                <span className="relative z-10">Adjoba</span>
+            {/* Welcome headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-[#1a2332] tracking-tight leading-[1.1] mb-3 animate-fade-up delay-200">
+              Welcome to my{' '}
+              <span className="relative inline-block font-semibold">
+                <span className="relative z-10">Portfolio</span>
                 <span
                   className="absolute bottom-1 left-0 w-full h-2 bg-[#c9a84c]/25 rounded-sm -z-0"
                   aria-hidden="true"
                 />
               </span>
-              {' '}Mushia Cobbold
             </h1>
 
-            <h2 className="text-base sm:text-lg font-normal text-[#6b7280] mb-5 leading-relaxed animate-fade-up delay-300">
+            {/* Name subline */}
+            <p className="text-xl sm:text-2xl font-semibold text-[#1e3a5f] mb-4 animate-fade-up delay-300">
+              Hi, I'm Adjoba Mushia Cobbold
+            </p>
+
+            <h2 className="text-base sm:text-lg font-normal text-[#6b7280] mb-5 leading-relaxed animate-fade-up delay-400">
               MSc Finance &amp; FinTech &nbsp;·&nbsp; Aspiring Data Analyst / Technical Product Manager
             </h2>
 
-            <p className="text-base text-[#4b5563] leading-relaxed mb-9 max-w-lg animate-fade-up delay-400">
+            <p className="text-base text-[#4b5563] leading-relaxed mb-9 max-w-lg animate-fade-up delay-500">
               I bridge the gap between financial insight and data-driven decision making —
               building expertise in SQL, Python, Power BI, and product analytics while
               applying my MSc background to real-world problems.
