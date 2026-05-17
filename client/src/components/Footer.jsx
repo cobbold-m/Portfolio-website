@@ -18,7 +18,7 @@ function Footer() {
   };
 
   return (
-    <footer className="bg-[#1e3a5f] text-white">
+    <footer className="bg-[#162d4a] text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-10">
           {/* Brand column */}
@@ -31,7 +31,7 @@ function Footer() {
 
           {/* Navigation */}
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-[#60a5fa] mb-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#c9a84c] mb-4">
               Navigate
             </p>
             <ul className="space-y-2">
@@ -51,7 +51,7 @@ function Footer() {
 
           {/* Social / links */}
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-[#60a5fa] mb-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#c9a84c] mb-4">
               Connect
             </p>
             <ul className="space-y-2">
@@ -115,7 +115,7 @@ function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="border-t border-[#c9a84c]/20 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-slate-400">
             &copy; {year} Adjoba Mushia Cobbold. All rights reserved.
           </p>
