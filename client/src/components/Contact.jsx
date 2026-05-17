@@ -87,11 +87,11 @@ function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-14 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={ref} className="reveal-section">
+        <div ref={ref} className="reveal-section border border-[#e8e4de] rounded-3xl p-8 sm:p-10 bg-white">
 
-          <div className="flex items-center gap-4 mb-12">
+          <div className="flex items-center gap-4 mb-8">
             <div className="w-1 h-12 rounded-full bg-gradient-to-b from-[#1e3a5f] to-[#c9a84c]" />
             <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-[#c9a84c]">Get In Touch</span>

@@ -12,11 +12,12 @@ function About() {
   const ref = useScrollReveal();
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-14 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={ref} className="reveal-section">
+        <div ref={ref} className="reveal-section border border-[#e8e4de] rounded-3xl p-8 sm:p-10 bg-white">
 
-          <div className="flex items-center gap-4 mb-12">
+          {/* Section header */}
+          <div className="flex items-center gap-4 mb-8">
             <div className="w-1 h-12 rounded-full bg-gradient-to-b from-[#1e3a5f] to-[#c9a84c]" />
             <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-[#c9a84c]">About Me</span>
@@ -26,6 +27,7 @@ function About() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
+            {/* Body text */}
             <div className="space-y-4 text-[#4b5563] leading-relaxed text-base">
               <p>
                 I hold an <strong className="text-[#1e3a5f]">MSc in Finance &amp; FinTech</strong> and
@@ -43,6 +45,7 @@ function About() {
               </p>
             </div>
 
+            {/* Highlight cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {highlights.map((item) => (
                 <div key={item.label}

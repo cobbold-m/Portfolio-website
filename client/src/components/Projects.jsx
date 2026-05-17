@@ -14,7 +14,7 @@ function ProjectCard({ project }) {
 
         <p className="text-sm text-[#4b5563] leading-relaxed mb-4">{project.description}</p>
 
-        <div className="mb-5 p-3.5 rounded-2xl bg-[#fef9ec] border border-[#e8d5a0]">
+        <div className="mb-5 p-3.5 rounded-xl bg-[#fef9ec] border border-[#e8d5a0]">
           <p className="text-xs font-bold text-[#c9a84c] uppercase tracking-wider mb-1.5">Problem Solved</p>
           <p className="text-xs text-[#6b5a2a] leading-relaxed">{project.problem}</p>
         </div>
@@ -22,7 +22,7 @@ function ProjectCard({ project }) {
         <div className="flex flex-wrap gap-2 mb-6">
           {project.tools.map((tool) => (
             <span key={tool}
-              className="px-3 py-1 text-xs font-medium bg-[#faf9f7] text-[#4b5563] rounded-full border border-[#e8e4de]">
+              className="px-2.5 py-1 text-xs font-medium bg-[#faf9f7] text-[#4b5563] rounded-full border border-[#e8e4de]">
               {tool}
             </span>
           ))}
@@ -83,11 +83,11 @@ function Projects() {
   const ref = useScrollReveal();
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-14 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={ref} className="reveal-section">
+        <div ref={ref} className="reveal-section border border-[#e8e4de] rounded-3xl p-8 sm:p-10 bg-white">
 
-          <div className="flex items-center gap-4 mb-12">
+          <div className="flex items-center gap-4 mb-8">
             <div className="w-1 h-12 rounded-full bg-gradient-to-b from-[#1e3a5f] to-[#c9a84c]" />
             <div>
               <span className="text-xs font-semibold tracking-widest uppercase text-[#c9a84c]">My Work</span>
