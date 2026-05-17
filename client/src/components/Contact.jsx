@@ -68,18 +68,16 @@ function Contact() {
     'w-full px-4 py-3 rounded-lg border border-[#e2e8f0] bg-white text-slate-700 text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#3b82f6] focus:border-transparent transition-all duration-200';
 
   return (
-    <section id="contact" className="py-16 bg-[#f8fafc]">
+    <section id="contact" className="py-24 bg-[#f8fafc]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
-        <div className="flex items-center gap-4 mb-10">
-          <div className="w-1 h-10 rounded-full bg-gradient-to-b from-[#1e3a5f] to-[#3b82f6]" />
-          <div>
-            <span className="text-xs font-semibold tracking-widest uppercase text-[#3b82f6]">Get In Touch</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f]">Contact Me</h2>
-          </div>
-        </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start max-w-4xl mx-auto">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#3b82f6]">Get In Touch</span>
+          <div className="flex-1 h-px bg-[#e2e8f0]" />
+        </div>
+        <h2 className="text-4xl sm:text-5xl font-bold text-[#1e3a5f] tracking-tight mb-14">Contact Me</h2>
+
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left — contact info */}
           <div className="space-y-6">
             <h3 className="text-lg font-semibold text-[#1e3a5f]">Let's connect</h3>
