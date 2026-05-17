@@ -84,6 +84,19 @@ function Hero() {
           </div>
 
           <div className="hidden lg:flex flex-col gap-4">
+            <div className="bg-[#1e3a5f] rounded-2xl p-6 text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 opacity-10" aria-hidden="true">
+                <svg viewBox="0 0 128 128" fill="none">
+                  <circle cx="96" cy="32" r="60" stroke="white" strokeWidth="1" />
+                  <circle cx="96" cy="32" r="35" stroke="white" strokeWidth="1" />
+                </svg>
+              </div>
+              <p className="text-lg font-bold leading-snug">Data Analytics &amp; FinTech Solutions</p>
+              <p className="text-sm text-blue-200 mt-2 leading-relaxed">
+                Combining financial expertise with hands-on data skills to drive insight and impact.
+              </p>
+            </div>
+
             <div className="grid grid-cols-2 gap-4">
               {stats.map((s) => (
                 <div key={s.label}
