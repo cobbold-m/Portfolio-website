@@ -17,9 +17,9 @@ const skills = [
     category: 'Finance & FinTech',
     icon: '💼',
     items: [
-      'ESG Analysis',
+      'Portfolio Management',
       'Financial Markets',
-      'Real Estate Finance',
+      'Blockchain & Cryptocurrencies',
       'Digital Finance',
     ],
   },
@@ -37,10 +37,9 @@ const skills = [
     category: 'Tools',
     icon: '🛠️',
     items: [
-      'GitHub',
+      'VS Code',
       'Jupyter Notebook',
       'Google Colab',
-      'VS Code',
     ],
   },
 ];

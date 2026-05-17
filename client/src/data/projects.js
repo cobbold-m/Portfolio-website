@@ -4,14 +4,12 @@
 const projects = [
   {
     id: 1,
-    title: ' Brexit-Political-Uncertainty-UK-Stock-Market-Analysis',
-    description:
-      'This project analyses how political uncertainty affects the stock returns and trading volume of 200 UK-listed firms between 2016 and 2020, comparing the responses of domestically and internationally exposed companies.',
-      problem:
-    'Political risk affects firms unevenly, yet most models treat it as a uniform shock; This project proved that firms respond heterogeneously to political uncertainty shocks.',
+    title: 'Brexit Political Uncertainty & UK Stock Market Analysis',
+    description: 'Analysed how political uncertainty affects the stock returns and trading volume of 200 UK-listed firms between 2016 and 2020, comparing the responses of domestically and internationally exposed companies.',
+    problem: 'Political risk affects firms unevenly, yet most models treat it as a uniform shock. This project proved that firms respond heterogeneously to political uncertainty shocks.',
     tools: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib'],
-    githubUrl: 'https://github.com/cobbold-m/Brexit-Political-Uncertainty-UK-Stock-Market-Analysis', // TODO: Replace with your GitHub repo URL e.g. 'https://github.com/yourusername/esg-ml'
-    demoUrl: null,   // TODO: Replace with live demo URL if available
+    githubUrl: 'https://github.com/cobbold-m/Brexit-Political-Uncertainty-UK-Stock-Market-Analysis',
+    demoUrl: null,
   },
   {
     id: 2,
@@ -21,7 +19,7 @@ const projects = [
     problem:
       'Financial institutions need fast, scalable ways to query and analyse large transaction datasets.',
     tools: ['SQL', 'PostgreSQL', 'Excel'],
-    githubUrl: null, // TODO: Replace with your GitHub repo URL
+    githubUrl: null,
     demoUrl: null,
   },
   {
@@ -32,7 +30,7 @@ const projects = [
     problem:
       'ESG data is often scattered and hard to interpret; this dashboard centralises and visualises it clearly.',
     tools: ['Power BI', 'Excel', 'DAX'],
-    githubUrl: null, // TODO: Replace with your GitHub repo URL
+    githubUrl: null,
     demoUrl: null,
   },
   {
@@ -43,7 +41,7 @@ const projects = [
     problem:
       'Product teams need statistical rigour to validate design decisions — this case study demonstrates that process end to end.',
     tools: ['Python', 'SciPy', 'Pandas', 'Jupyter Notebook'],
-    githubUrl: null, // TODO: Replace with your GitHub repo URL
+    githubUrl: null,
     demoUrl: null,
   },
 ];

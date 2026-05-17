@@ -38,8 +38,6 @@ function ProjectCard({ project }) {
 
         {/* Spacer to push buttons to bottom */}
         <div className="mt-auto flex gap-3">
-          {/* GitHub link */}
-          {/* TODO: Add your GitHub repo URL to each project in src/data/projects.js */}
           <a
             href={project.githubUrl || '#'}
             target={project.githubUrl ? '_blank' : '_self'}
@@ -57,8 +55,6 @@ function ProjectCard({ project }) {
             {project.githubUrl ? 'GitHub' : 'Coming Soon'}
           </a>
 
-          {/* Case study / demo link */}
-          {/* TODO: Add live demo or case study URL to each project in src/data/projects.js */}
           {project.demoUrl && (
             <a
               href={project.demoUrl}
@@ -81,18 +77,15 @@ function ProjectCard({ project }) {
 
 function Projects() {
   return (
-    <section id="projects" className="py-24 bg-white">
+    <section id="projects" className="py-16 bg-[#f8fafc]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="mb-14">
-          <span className="text-xs font-semibold tracking-widest uppercase text-[#3b82f6]">
-            My Work
-          </span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#1e3a5f]">Projects</h2>
-          <p className="mt-3 text-slate-500 max-w-xl">
-            A selection of data and analytics projects demonstrating my skills in Python, SQL,
-            Power BI, and product thinking.
-          </p>
+        <div className="flex items-center gap-4 mb-10">
+          <div className="w-1 h-10 rounded-full bg-gradient-to-b from-[#1e3a5f] to-[#3b82f6]" />
+          <div>
+            <span className="text-xs font-semibold tracking-widest uppercase text-[#3b82f6]">My Work</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f]">Projects</h2>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

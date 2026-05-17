@@ -5,7 +5,7 @@ const experience = [
     id: 1,
     role: 'Junior Product Manager',
     company: 'Achive by Petra',
-    period: 'Sep 2024 – Sep 2025', // TODO: Replace with your actual dates
+    period: 'Sep 2024 – Sep 2025',
     location: 'Accra, Ghana',
     description:
       'Owned data-informed product roadmap for Achieve Money, using SQL and Python to extract customer behavior insights and prioritize features based on business value metrics',
@@ -20,8 +20,8 @@ const experience = [
   {
     id: 2,
     role: 'Student Ambassador / Academic Support',
-    company: 'University of Reading', // TODO: Replace with your actual university name
-    period: 'Sep 2025 – Sep 2026', // TODO: Replace with your actual dates
+    company: 'University of Reading',
+    period: 'Sep 2025 – Sep 2026',
     location: 'Reading, United Kingdom',
     description:
       'Supported students in academic development, delivered presentations, and assisted with university events.',
@@ -30,7 +30,7 @@ const experience = [
       'Delivered presentations at open days and campus events, representing the university.',
       'Strengthened public speaking, documentation, and interpersonal skills.',
     ],
-    companyUrl: 'https://www.reading.ac.uk'/,
+    companyUrl: 'https://www.reading.ac.uk/',
   },
 ];
 

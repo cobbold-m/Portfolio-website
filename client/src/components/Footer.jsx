@@ -23,8 +23,7 @@ function Footer() {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mb-10">
           {/* Brand column */}
           <div>
-            {/* TODO: Replace [YOUR NAME] with your actual name */}
-            <p className="text-lg font-bold tracking-tight text-white mb-2">[YOUR NAME]</p>
+            <p className="text-lg font-bold tracking-tight text-white mb-2">Adjoba Mushia Cobbold</p>
             <p className="text-sm text-slate-300 leading-relaxed max-w-xs">
               MSc Finance &amp; FinTech &mdash; bridging financial insight and data-driven decision making.
             </p>
@@ -56,10 +55,9 @@ function Footer() {
               Connect
             </p>
             <ul className="space-y-2">
-              {/* TODO: Replace href with your actual LinkedIn URL */}
               <li>
                 <a
-                  href="https://linkedin.com/in/yourname"
+                  href="https://www.linkedin.com/in/adjoba-cobbold/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors duration-200"
@@ -71,10 +69,9 @@ function Footer() {
                 </a>
               </li>
 
-              {/* TODO: Replace href with your actual GitHub URL */}
               <li>
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/cobbold-m"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors duration-200"
@@ -86,10 +83,9 @@ function Footer() {
                 </a>
               </li>
 
-              {/* TODO: Replace href with your actual email */}
               <li>
                 <a
-                  href="mailto:your.email@example.com"
+                  href="mailto:ajobamushia@gmail.com"
                   className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors duration-200"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,11 +96,9 @@ function Footer() {
                 </a>
               </li>
 
-              {/* Download CV */}
-              {/* TODO: Replace href with your actual CV file path e.g. '/cv/YourName_CV.pdf' */}
               <li>
                 <a
-                  href="/cv/your-cv.pdf"
+                  href="/cv/ADJOBA_COBBOLD_M.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors duration-200"
@@ -123,8 +117,7 @@ function Footer() {
         {/* Divider */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-slate-400">
-            {/* TODO: Replace [YOUR NAME] with your actual name */}
-            &copy; {year} [YOUR NAME]. All rights reserved.
+            &copy; {year} Adjoba Mushia Cobbold. All rights reserved.
           </p>
           <p className="text-xs text-slate-500">
             Built with React, Tailwind CSS &amp; Express

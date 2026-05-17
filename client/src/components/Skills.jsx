@@ -1,6 +1,13 @@
 import React from 'react';
 import skills from '../data/skills.js';
 
+const categoryStyle = {
+  'Data & Analytics': { bg: 'bg-[#1e3a5f]', light: 'bg-[#eff6ff]', text: 'text-[#1e3a5f]' },
+  'Finance & FinTech': { bg: 'bg-[#0f4c81]', light: 'bg-[#e0f0ff]', text: 'text-[#0f4c81]' },
+  'Product & Business': { bg: 'bg-[#1e4d7b]', light: 'bg-[#e8f4fd]', text: 'text-[#1e4d7b]' },
+  'Tools':             { bg: 'bg-[#2a4f7f]', light: 'bg-[#eef4fb]', text: 'text-[#2a4f7f]' },
+};
+
 const categoryIcons = {
   'Data & Analytics': (
     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -31,45 +38,50 @@ const categoryIcons = {
 
 function Skills() {
   return (
-    <section id="skills" className="py-24 bg-[#f8fafc]">
+    <section id="skills" className="py-16 bg-[#f8fafc]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* Section header */}
-        <div className="mb-14">
-          <span className="text-xs font-semibold tracking-widest uppercase text-[#3b82f6]">
-            What I Know
-          </span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[#1e3a5f]">Skills</h2>
+        <div className="flex items-center gap-4 mb-10">
+          <div className="w-1 h-10 rounded-full bg-gradient-to-b from-[#1e3a5f] to-[#3b82f6]" />
+          <div>
+            <span className="text-xs font-semibold tracking-widest uppercase text-[#3b82f6]">What I Know</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1e3a5f]">Skills</h2>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {skills.map((group) => (
-            <div
-              key={group.category}
-              className="bg-white rounded-xl p-6 border border-[#e2e8f0] hover:border-[#3b82f6] hover:shadow-md transition-all duration-200"
-            >
-              {/* Category header */}
-              <div className="flex items-center gap-2 mb-5">
-                <div className="p-2 rounded-lg bg-[#eff6ff] text-[#3b82f6]">
-                  {categoryIcons[group.category]}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {skills.map((group) => {
+            const style = categoryStyle[group.category] || categoryStyle['Tools'];
+            return (
+              <div
+                key={group.category}
+                className="bg-white rounded-xl border border-[#e2e8f0] overflow-hidden hover:shadow-md hover:border-[#3b82f6] transition-all duration-200"
+              >
+                {/* Card header — navy */}
+                <div className={`${style.bg} px-5 py-4 flex items-center gap-3`}>
+                  <div className="text-white opacity-90">
+                    {categoryIcons[group.category]}
+                  </div>
+                  <h3 className="text-sm font-semibold text-white leading-tight">
+                    {group.category}
+                  </h3>
                 </div>
-                <h3 className="text-sm font-semibold text-[#1e3a5f] leading-tight">
-                  {group.category}
-                </h3>
-              </div>
 
-              {/* Skill tags */}
-              <div className="flex flex-wrap gap-2">
-                {group.items.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 text-xs font-medium bg-[#f1f5f9] text-slate-600 rounded-full border border-[#e2e8f0]"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                {/* Skill tags */}
+                <div className="p-5 flex flex-wrap gap-2">
+                  {group.items.map((skill) => (
+                    <span
+                      key={skill}
+                      className={`px-3 py-1 text-xs font-medium ${style.light} ${style.text} rounded-full border border-[#dbeafe]`}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
