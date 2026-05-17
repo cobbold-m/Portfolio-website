@@ -5,6 +5,7 @@ import About from './components/About.jsx';
 import Skills from './components/Skills.jsx';
 import Projects from './components/Projects.jsx';
 import Experience from './components/Experience.jsx';
+import Testimonials from './components/Testimonials.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import SectionDivider from './components/SectionDivider.jsx';
@@ -23,6 +24,8 @@ function App() {
         <Projects />
         <SectionDivider />
         <Experience />
+        <SectionDivider />
+        <Testimonials />
         <SectionDivider />
         <Contact />
       </main>
