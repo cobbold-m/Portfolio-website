@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 const stats = [
-  { value: '4+', label: 'Projects' },
+  { value: '2+', label: 'Projects' },
   { value: 'MSc', label: 'Finance & FinTech' },
-  { value: '3+', label: 'Roles' },
+  { value: '2+', label: 'Roles' },
   { value: 'SQL · Python · BI', label: 'Core Stack' },
 ];
 
