@@ -49,7 +49,6 @@ function Hero() {
       id="hero"
       className="min-h-screen flex items-center bg-gradient-to-br from-[#fdf8f2] via-[#faf9f7] to-[#eef2f8] pt-16 relative overflow-hidden"
     >
-      {/* Dot grid — bottom-left, very subtle */}
       <div className="absolute bottom-20 left-0 w-52 h-52 pointer-events-none opacity-[0.04]" aria-hidden="true">
         <svg viewBox="0 0 208 208" fill="none" xmlns="http://www.w3.org/2000/svg">
           {Array.from({ length: 6 }).map((_, row) =>
@@ -63,15 +62,12 @@ function Hero() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-          {/* Left column */}
           <div>
-            {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-[#c9a84c]/40 rounded-full mb-7 animate-fade-in delay-100 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-[#c9a84c] animate-pulse" />
               <span className="text-xs font-medium text-[#1e3a5f] tracking-wide uppercase">Open to opportunities</span>
             </div>
 
-            {/* Name */}
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-[#1a2332] tracking-tight leading-[1.05] mb-5 animate-fade-up delay-200">
               Hi, I'm{' '}
               <span className="relative inline-block">
@@ -116,12 +112,10 @@ function Hero() {
             </div>
           </div>
 
-          {/* Right column */}
           <div className="hidden lg:flex flex-col gap-5 animate-slide-right delay-300">
 
             <ProfilePhoto />
 
-            {/* Currently card */}
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-sm border border-[#f0ece6]">
               <p className="text-xs font-bold text-[#c9a84c] uppercase tracking-widest mb-3.5">Currently</p>
               <ul className="space-y-2.5">
@@ -134,7 +128,6 @@ function Hero() {
               </ul>
             </div>
 
-            {/* Stats grid */}
             <div className="grid grid-cols-2 gap-3">
               {stats.map((s) => (
                 <div key={s.label}
@@ -142,17 +135,12 @@ function Hero() {
                   <p className="text-xl font-bold text-[#1e3a5f]">{s.value}</p>
                   <p className="text-xs text-[#6b7280] mt-0.5 font-medium leading-tight">{s.label}</p>
                   {s.detail && (
-                    <ul className="mt-1.5 space-y-0.5">
-                      {s.detail.map((d) => (
-                        <li key={d} className="text-xs text-[#9ca3af] leading-none">{d}</li>
-                      ))}
-                    </ul>
+                    <p className="mt-1.5 text-xs text-[#9ca3af] leading-tight">{s.detail.join(' · ')}</p>
                   )}
                 </div>
               ))}
             </div>
 
-            {/* Scroll hint */}
             <a href="#about" onClick={(e) => handleScroll(e, '#about')}
               className="flex items-center gap-2 text-[#4b5563] hover:text-[#c9a84c] transition-colors duration-200 text-xs font-medium tracking-widest uppercase">
               <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
