@@ -1,36 +1,34 @@
-// TODO: Update dates, company URLs, and any additional details for each role
-
 const experience = [
   {
     id: 1,
     role: 'Junior Product Manager',
     company: 'Achieve by Petra',
-    period: 'Sep 2024 – Sep 2025',
+    period: 'Nov 2024 – Sep 2025',
     location: 'Accra, Ghana',
     description:
-      'Owned data-informed product roadmap for Achieve Money, using SQL and Python to extract customer behavior insights and prioritize features based on business value metrics',
+      'Turned business and customer needs into clear product requirements, reducing ambiguity for engineering and UX teams during development.',
     highlights: [
-      'Built automated reporting dashboards tracking customer satisfaction (improved from 60% to 90%) and product adoption, presenting findings to non-technical stakeholders and senior leadership.',
-      'Managed end-to-end data requirements in Agile sprints, translating business needs into technical specifications for engineering teams and ensuring consistent data documentation',
-      'Collaborated cross-functionally with UX, engineering, and compliance teams to deliver regulatory-compliant product releases on schedule',
+      'Supported Agile product delivery across planning, testing and release stages, helping ensure product updates were delivered in line with functional and user requirements.',
+      'Improved communication across product, engineering, compliance and operations teams by clarifying priorities, tracking progress and escalating delivery risks early.',
+      'Analysed customer feedback and product performance data to identify improvement opportunities, contributing to a rise in customer satisfaction from 60% to 90%.',
+      'Recommended improvements to manual reporting and internal workflows, helping reduce repetitive work and improve visibility for product and operational teams.',
     ],
-    companyUrl: 'https://theachieveapp.com/'
+    companyUrl: 'https://theachieveapp.com/',
   },
-  
   {
     id: 2,
-    role: 'Student Ambassador / Academic Support',
-    company: 'University of Reading',
-    period: 'Sep 2025 – Sep 2026',
-    location: 'Reading, United Kingdom',
+    role: 'Real Estate Investment Analyst — Internship',
+    company: 'Valuation and Investments Associates',
+    period: 'Sep 2023 – Dec 2023',
+    location: 'Accra, Ghana',
     description:
-      'Supported students in academic development, delivered presentations, and assisted with university events.',
+      'Built DCF valuation models for residential and commercial property opportunities, testing key assumptions such as occupancy, rental income and discount rates to support investment appraisal.',
     highlights: [
-      'Mentored fellow students, providing guidance on academic resources and study strategies.',
-      'Delivered presentations at open days and campus events, representing the university.',
-      'Strengthened public speaking, documentation, and interpersonal skills.',
+      'Analysed portfolio and market data to identify trends in rental yields, vacancy levels and capital growth, helping strengthen the evidence base for investment recommendations.',
+      'Supported procurement and vendor selection by comparing contractor tenders against weighted scoring criteria, contributing to more transparent and cost-conscious decision-making.',
+      'Prepared clear valuation summaries and investment notes for senior team members, improving the presentation of key risks, assumptions and financial outputs.',
     ],
-    companyUrl: 'https://www.reading.ac.uk/',
+    companyUrl: null,
   },
 ];
 

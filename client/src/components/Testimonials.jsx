@@ -4,7 +4,7 @@ const testimonials = [
   {
     id: 1,
     quote: "Adjoba is one of the most driven and analytical people I have worked with. On our project together, she brought structure and clarity to every problem we tackled, always thinking two steps ahead. Her ability to translate complex data into clear insights is genuinely impressive.",
-    name: 'Maame Cobbold',
+    name: 'Maame C.',
     role: 'Freelance Collaborator',
   },
 ];
