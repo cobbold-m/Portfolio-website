@@ -1,6 +1,22 @@
 const experience = [
   {
     id: 1,
+    role: 'Student and Recruitment Outreach Ambassador',
+    company: 'University of Reading — Student Recruitment Office',
+    period: 'Sep 2025 – Sep 2026',
+    location: 'Reading, United Kingdom',
+    description:
+      'Represent the university at postgraduate open days and recruitment events, providing prospective students with insights into the MSc Finance and FinTech programme.',
+    highlights: [
+      'Engage one-on-one with prospective postgraduate students at open days, answering programme-specific questions and sharing first-hand experience of studying MSc Finance & FinTech.',
+      'Support the recruitment office in delivering a welcoming and informative event experience, contributing to a positive first impression of the university.',
+      'Collaborate with admissions and marketing teams to ensure consistent, accurate messaging about programme content, entry requirements and student life.',
+      'Gather and relay prospective student feedback to the recruitment team, helping inform improvements to outreach materials and event delivery.',
+    ],
+    companyUrl: 'https://www.reading.ac.uk/',
+  },
+  {
+    id: 2,
     role: 'Junior Product Manager',
     company: 'Achieve by Petra',
     period: 'Nov 2024 – Sep 2025',
@@ -16,7 +32,7 @@ const experience = [
     companyUrl: 'https://theachieveapp.com/',
   },
   {
-    id: 2,
+    id: 3,
     role: 'Real Estate Investment Analyst — Internship',
     company: 'Valuation and Investments Associates',
     period: 'Sep 2023 – Dec 2023',
