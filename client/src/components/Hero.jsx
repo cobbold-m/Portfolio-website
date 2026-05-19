@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const stats = [
   { value: '2+', label: 'Projects' },
   { value: 'MSc', label: 'Finance & FinTech' },
-  { value: '3', label: 'Industries' },
+  { value: '3', label: 'Industries', detail: ['Finance', 'Real Estate', 'FinTech'] },
   { value: 'SQL · Python · BI', label: 'Core Stack' },
 ];
 
@@ -105,7 +105,7 @@ function Hero() {
               </a>
               <a href="https://www.linkedin.com/in/adjoba-cobbold/" target="_blank" rel="noopener noreferrer"
                 className="flex-shrink-0 px-4 py-2.5 border border-[#e8e4de] text-[#4b5563] font-medium rounded-full hover:border-[#c9a84c] hover:text-[#1e3a5f] transition-all duration-200 flex items-center gap-2 text-sm">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.577 7 2.476v6.759z"/></svg>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 LinkedIn
               </a>
               <a href="https://github.com/cobbold-m" target="_blank" rel="noopener noreferrer"
@@ -141,6 +141,13 @@ function Hero() {
                   className="bg-white rounded-2xl shadow-sm p-4 hover:shadow-md hover:shadow-amber-100/50 hover:-translate-y-0.5 transition-all duration-200">
                   <p className="text-xl font-bold text-[#1e3a5f]">{s.value}</p>
                   <p className="text-xs text-[#6b7280] mt-0.5 font-medium leading-tight">{s.label}</p>
+                  {s.detail && (
+                    <ul className="mt-1.5 space-y-0.5">
+                      {s.detail.map((d) => (
+                        <li key={d} className="text-xs text-[#9ca3af] leading-none">{d}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
             </div>
